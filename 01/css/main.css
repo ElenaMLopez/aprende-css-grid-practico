@@ -4,8 +4,20 @@ main > * {
     font-size: 3em;
 }
 
+/* PASOS:
+1. Definir el contenedor como GRID.
+2. Dar nombre a los elementos a distriguir en el
+contenedor grid.
+3. Definir la disposición de los elementos en el
+contenedor grid con la propiedad grid-template-areas
+en caso de querer dejar libre un hueco, se puede poner
+un . (punto) en esa posición. */
 /* Definimos el GRID container */
-main {
+/* Primero se define el grid container y una vez
+definidos los nombres de los elementos del HTML
+serán agregados en la disposición que deseemos en
+el contenedor */
+.contenedor-principal {
     display: grid;
     grid-gap: 10px;
     grid-template-areas:
@@ -18,7 +30,7 @@ main {
 
 /* Desktop */
 @media (min-width: 500px) {
-    main {
+    .contenedor-principal {
         grid-template-areas:
         "header header header"
         "contenido izquierda derecha"
